@@ -1,14 +1,42 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 {% load static %}
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Django-Market</title>
-</head>
-<body>
-    <h2>Store</h2>
-</body>
-</html>
+
+
+{% block content  %}
+
+<div class="row">
+    <div class="col-lg-4">
+        <img class="thumbnail"  src="{% static 'images/produits/produit.jpg' %}" alt="produit1">
+        <div class="box-element product">
+            <h6><strong>Produit1</strong></h6>
+            <hr>
+            <button class="btn btn-outline-secondary btn-add">Ajouter au panier</button>
+            <a href="#" class="btn btn-outline-success">Voir</a>
+            <h4 style="float: right;">10$</h4>
+
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <img class="thumbnail" src="{% static 'images/produits/produit.jpg' %}" alt="produit1">
+        <div class="box-element product">
+            <h6><strong>Produits2</strong></h6>
+            <hr>
+            <button class="btn btn-outline-secondary btn-add">Ajouter au panier</button>
+
+            
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <img class="thumbnail" src="{% static 'images/produits/produit.jpg' %}" alt="produit1">
+        <div class="box-element product">
+            <h6><strong>Produit3</strong></h6>
+            <hr>
+            <button class="btn btn-outline-secondary btn-add">Ajouter au panier</button>
+
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content  %}
